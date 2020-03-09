@@ -35,7 +35,7 @@ module Pipely
       def initialize(*args, &task_block)
         setup_ivars(args)
 
-        unless ::Rake.application.last_comment
+        unless ::Rake.application.last_description
           desc "Upload Data Pipeline steps to S3"
         end
 

@@ -26,7 +26,7 @@ module Pipely
       def initialize(*args, &task_block)
         setup_ivars(args)
 
-        desc "Deploy pipeline" unless ::Rake.application.last_comment
+        desc "Deploy pipeline" unless ::Rake.application.last_description
 
         task name, *args do |_, task_args|
           RakeFileUtils.send(:verbose, verbose) do
